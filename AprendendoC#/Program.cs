@@ -168,7 +168,6 @@ void avaliarBanda()
         exibiInicio();
     }
 }
-
 void mediaBandas()
 {
     Console.Clear();
@@ -187,7 +186,6 @@ void mediaBandas()
         exibiInicio();
     }
 }
-
 void ExibirTituloOpcao(string titulo)
 {
     int qtdeLetras = titulo.Length;
@@ -197,14 +195,11 @@ void ExibirTituloOpcao(string titulo)
     Console.WriteLine(asteriscos + "\n");
 
 }
-
-
 void exibiInicio()
 {
     exibiLogo();
     exibiMenu();
 }
-
 void retorna()
 {
     Console.Write("\nPressione qualquer tecla para retornar ao menu principal ");
@@ -212,4 +207,5 @@ void retorna()
     Console.Clear();
     exibiInicio();
 }
+
 exibiInicio();
