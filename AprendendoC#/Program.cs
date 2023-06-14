@@ -131,7 +131,7 @@ void avaliarBanda()
     string bandaAvaliada = Console.ReadLine()!;
     if(bandasRegistradas.ContainsKey(bandaAvaliada))
     {
-        Console.Write($"\nCom qual nota deseja avaliar {bandaAvaliada}> : ");
+        Console.Write($"\nCom qual nota deseja avaliar {bandaAvaliada} : ");
         float notaAvaliada = float.Parse(Console.ReadLine()!);
         bandasRegistradas[bandaAvaliada].Add(notaAvaliada);
         Console.WriteLine($"\n{bandaAvaliada} foi avaliada em nota {notaAvaliada} com sucesso! ");
@@ -172,6 +172,11 @@ void mediaBandas()
 {
     Console.Clear();
     ExibirTituloOpcao("Média das bandas");
+    Console.WriteLine("Bandas existentes: ");
+    foreach (string banda in bandasRegistradas.Keys)
+    {
+        Console.WriteLine($"- {banda}");
+    }
     Console.Write("De qual banda você quer ver as médias? : ");
     string bandaDesejada = Console.ReadLine()!;
     if (bandasRegistradas.ContainsKey(bandaDesejada)){
